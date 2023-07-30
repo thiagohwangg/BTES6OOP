@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="text-center text-white">Quản Lý học viện nghiên cứu và giảng dạy</h1>
+    <select id="select" class="btn btn-primary ms-5">
+        <option class="" value="">Chọn đối tượng</option>
+        <option value="Student">Student</option>
+        <option value="Employee">Employee</option>
+        <option value="Customer">Customer</option>
+    </select>
+    <button id="btnThem" type="button" class="btn btn-success ms-5" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" data-bs-whatever="@mdo">Thêm người dùng</button>
+    <select id="sort" class="btn btn-secondary ms-5">
+        <option value="">Sắp xếp </option>
+        <option value="sortName">Tên (a-z)</option>
+        <option value="sortName1">Tên (z-a)</option>
+    </select>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Điền thông tin học sinh</h1>
+                    <button id="close" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    
+                    <button id="btnDTB" class="btn btn-outline-success" style="display: none;">Tính ĐTB</button>
+                    <button id="salary" class="btn btn-outline-success" style="display: none;">Tính Lương</button>
+                    <button id="btnEdit" type="submit" class="btn btn-outline-info">Chỉnh sửa</button>
+                    <button id="btnAdd" type="submit" class="btn btn-primary">Thêm người dùng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table mt-4">
+        <thead>
+            <tr id="tdHead">
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="./ulti/validation.js"></script>
+    <script type="module" src="./JavaScript/main.js"></script>
+</body>
+
+</html>
